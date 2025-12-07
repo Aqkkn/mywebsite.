@@ -1,0 +1,110 @@
+:root{
+  --bg:#0b0b0d;
+  --card:#111115;
+  --text:#e6e6e9;
+  --muted:#a0a0a6;
+  --accent:#ff4da6; /* pink */
+  --maxw:980px;
+  --radius:12px;
+  --gap:18px;
+  --mono: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:var(--mono);
+  background:linear-gradient(180deg,#070708 0%, #0f0f12 100%);
+  color:var(--text);
+  padding:28px;
+  display:flex;
+  justify-content:center;
+}
+
+.container{
+  width:100%;
+  max-width:var(--maxw);
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.6);
+}
+
+.header{
+  margin-bottom:18px;
+}
+
+.title{
+  font-size:28px;
+  letter-spacing:0.2px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.logo{
+  width:56px;
+  height:56px;
+  border-radius:10px;
+  background:linear-gradient(135deg,var(--accent),#ff7ab1);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  color:#1a001a;
+}
+
+.hr{
+  height:1px;
+  background:linear-gradient(90deg,transparent,#1d1d21,transparent);
+  margin:18px 0;
+  border-radius:2px;
+}
+
+.content{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:var(--gap);
+}
+
+.card{
+  background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.01));
+  padding:18px;
+  border-radius:10px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+.contact small{ color:var(--muted); }
+
+a.inline-link{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+
+a.inline-link:hover{
+  text-decoration:underline;
+  opacity:0.95;
+}
+
+.section-title{
+  color:var(--accent);
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+ul{ margin:8px 0 8px 20px; }
+ol{ margin:8px 0 8px 20px; }
+
+.footer{
+  margin-top:18px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+@media (max-width:720px){
+  .title{ flex-direction:column; align-items:flex-start; }
+  .content{ grid-template-columns:1fr; }
+  body{ padding:14px; }
+}
